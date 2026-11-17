@@ -624,10 +624,10 @@ final class AudioEngine: ObservableObject {
         var last: Float = 0
         for i in 0..<n {
             let t = Float(i) / 44100.0
-            let burst1 = (t < 0.012) ? 1.0 : 0.0
-            let burst2 = (t >= 0.015 && t < 0.028) ? 0.9 : 0.0
-            let burst3 = (t >= 0.032) ? exp(-(t - 0.032) * 16.0) : 0.0
-            let env = Float(max(burst1, burst2, burst3))
+            let burst1: Float = (t < 0.012) ? 1.0 : 0.0
+            let burst2: Float = (t >= 0.015 && t < 0.028) ? 0.9 : 0.0
+            let burst3: Float = (t >= 0.032) ? exp(-(t - 0.032) * 16.0) : 0.0
+            let env = max(burst1, burst2, burst3)
             let raw = Float.random(in: -1...1)
             let hp = raw - last * 0.7
             last = raw
@@ -764,7 +764,7 @@ final class AudioEngine: ObservableObject {
 
         func addBuffer(_ buf: AVAudioPCMBuffer, atFrame startFrame: Int, gain: Float) {
             guard gain > 0.001, let chL = buf.floatChannelData?[0] else { return }
-            let chR = buf.channelCount > 1 ? buf.floatChannelData![1] : chL
+            let chR = buf.format.channelCount > 1 ? buf.floatChannelData![1] : chL
             let count = Int(buf.frameLength)
             let limit = min(count, totalFrames - startFrame)
             guard limit > 0 else { return }

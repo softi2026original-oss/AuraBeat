@@ -30,8 +30,8 @@ enum SongPreset: String, CaseIterable, Identifiable {
     }
 
     private static func makeDrums(
-        kick: [Int],
-        snare: [Int],
+        kick: [Int] = [],
+        snare: [Int] = [],
         clap: [Int] = [],
         hatClosed: [Int] = [],
         hatOpen: [Int] = [],
