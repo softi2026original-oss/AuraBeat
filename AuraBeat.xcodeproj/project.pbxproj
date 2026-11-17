@@ -197,7 +197,7 @@
 
 /* Begin XCBuildConfiguration section */
 		FF0005010000000000000001 /* Debug */ = {
-			isa = PBXBuildConfiguration;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -217,7 +217,7 @@
 			name = Debug;
 		};
 		FF0005010000000000000002 /* Release */ = {
-			isa = PBXBuildConfiguration;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -236,7 +236,7 @@
 			name = Release;
 		};
 		FF0005010000000000000003 /* Debug */ = {
-			isa = PBXBuildConfiguration;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -261,7 +261,7 @@
 			name = Debug;
 		};
 		FF0005010000000000000004 /* Release */ = {
-			isa = PBXBuildConfiguration;
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
